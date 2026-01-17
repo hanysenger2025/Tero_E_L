@@ -1,0 +1,5 @@
+{
+  "name": "TERO Electronic Library",
+  "description": "A comprehensive electronic library application for the Ministry of Education (TERO), featuring document management, dashboards, and an AI assistant.",
+  "requestFramePermissions": []
+}
