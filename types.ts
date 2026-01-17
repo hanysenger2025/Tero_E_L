@@ -6,22 +6,26 @@ export enum ContentType {
   FILES = 'FILES',
   LINK = 'LINK',
   DASHBOARD = 'DASHBOARD',
-  CHATBOT = 'CHATBOT'
+  CHATBOT = 'CHATBOT',
+  ADMIN_CONFIG = 'ADMIN_CONFIG'
 }
 
 export interface SubCategory {
   id: string;
   title: string;
   type: ContentType;
+  description?: string;
   lastModified?: string;
 }
 
 export interface Category {
   id: string;
   title: string;
-  icon: ReactNode;
+  icon?: string; // Using string for icon names to allow persistence
+  iconElement?: ReactNode; 
   subCategories?: SubCategory[];
   type?: ContentType;
+  description?: string;
   lastModified?: string;
 }
 
@@ -41,4 +45,11 @@ export interface Stat {
   change?: string;
   trend?: 'up' | 'down';
   icon: any;
+}
+
+export interface AppTheme {
+  primary: string;
+  secondary: string;
+  accent: string;
+  background: string;
 }
